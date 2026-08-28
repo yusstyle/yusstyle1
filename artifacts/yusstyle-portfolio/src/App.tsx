@@ -15,7 +15,7 @@ import {
 import heroBackground from '@assets/generated_images/yusstyle-hero-background.jpg';
 import aiWorkflowBackground from '@assets/generated_images/ai-workflow-background.jpg';
 import portraitPhoto from '@assets/WhatsApp_Image_2026-08-21_at_09.39.53_1787955883670.jpeg';
-import twoTorConnectImage from '@assets/generated_images/project-2torconnect.jpg';
+import twoTorConnectImage from '@assets/2torconnect-dashboard.png';
 import campusLoopImage from '@assets/generated_images/project-campusloop.jpg';
 import blockDagVaultImage from '@assets/generated_images/project-blockdagvault.jpg';
 import dagforgeHubImage from '@assets/generated_images/project-dagforge-hub.jpg';
@@ -30,6 +30,8 @@ type Project = {
   tone: 'green' | 'gold' | 'ink';
   mark: string;
   image: string;
+  imageKind?: 'art' | 'screenshot';
+  link?: string;
 };
 
 const projects: Project[] = [
@@ -43,6 +45,8 @@ const projects: Project[] = [
     tone: 'green',
     mark: '2t',
     image: twoTorConnectImage,
+    imageKind: 'screenshot',
+    link: 'https://2torconnect1.vercel.app/',
   },
   {
     number: '02',
@@ -243,10 +247,11 @@ function EditorialPortrait() {
 
 function ProjectVisual({ project }: { project: Project }) {
   const tone = project.tone === 'green' ? '#1d4033' : project.tone === 'gold' ? '#b99457' : '#202b2a';
+  const isScreenshot = project.imageKind === 'screenshot';
   return (
     <div className="project-art relative h-full min-h-[310px] overflow-hidden" style={{ backgroundColor: tone }}>
-      <img src={project.image} alt={`${project.name} visual study`} className="absolute inset-0 h-full w-full object-cover opacity-80 mix-blend-soft-light" />
-      <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(15,36,29,.25),rgba(15,36,29,.72))]" />
+      <img src={project.image} alt={isScreenshot ? `Screenshot of the ${project.name} website` : `${project.name} visual study`} className={`absolute inset-0 h-full w-full object-cover ${isScreenshot ? 'opacity-100' : 'opacity-80 mix-blend-soft-light'}`} />
+      <div className={`absolute inset-0 ${isScreenshot ? 'bg-[linear-gradient(145deg,rgba(15,36,29,.08),rgba(15,36,29,.28))]' : 'bg-[linear-gradient(145deg,rgba(15,36,29,.25),rgba(15,36,29,.72))]'}`} />
       <div className="absolute inset-0 opacity-60" style={{ backgroundImage: 'linear-gradient(125deg, transparent 35%, rgba(236,211,154,.34) 35.2%, transparent 35.6%), linear-gradient(25deg, transparent 54%, rgba(236,211,154,.18) 54.2%, transparent 54.6%)' }} />
       <div className="absolute left-[15%] top-[18%] h-44 w-44 rounded-full border border-[#ecd39a]/45" />
       <div className="absolute left-[23%] top-[26%] h-28 w-28 rounded-full border border-[#ecd39a]/30" />
@@ -475,6 +480,7 @@ function App() {
               <h3 className="mt-8 font-display text-6xl italic leading-[.82] sm:text-8xl">{selectedProject.name}</h3>
               <p className="mt-8 max-w-lg text-base leading-8 text-[#536056]">{selectedProject.description}</p>
               <div className="mt-10 border-t border-[#19372b]/15 pt-5"><span className="font-mono-ui text-[9px] tracking-[0.14em] text-[#b89453]">ROLE</span><p className="mt-2 text-sm font-semibold">{selectedProject.role}</p></div>
+              {selectedProject.link && <a href={selectedProject.link} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#19372b] px-5 py-3 font-mono-ui text-[10px] font-bold tracking-[0.12em] text-[#f4efdf] transition-transform hover:-translate-y-0.5" data-testid="link-project-live">VIEW LIVE PROJECT <ArrowUpRight size={14} /></a>}
             </motion.div>
           </motion.div>
         )}
