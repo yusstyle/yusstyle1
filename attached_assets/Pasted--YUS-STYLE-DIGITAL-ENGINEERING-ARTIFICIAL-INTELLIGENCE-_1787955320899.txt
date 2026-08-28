@@ -1,0 +1,252 @@
+# YUS’STYLE™
+
+### DIGITAL ENGINEERING × ARTIFICIAL INTELLIGENCE × PRODUCT
+
+**Yusuf Hussaini**
+
+## I BUILD DIGITAL SYSTEMS THAT MOVE IDEAS FORWARD.
+
+Software Engineer. Full-Stack Developer. AI Data Specialist. Product Builder.
+
+I design and build digital experiences at the intersection of **software engineering, artificial intelligence, data, and emerging technology**.
+
+From full-stack applications and university technology platforms to AI evaluation, data annotation, model-training workflows and Web3 products, I work across the layers required to turn an idea into a functional digital experience.
+
+**[Explore My Work]** **[Let's Work Together]**
+
+---
+
+# SELECTED WORK
+
+### 01 — 2torConnect
+
+**EDTECH / SOCIAL PLATFORM / FULL-STACK**
+
+A university ecosystem designed to connect students, tutors, learning resources and academic communities in one digital environment.
+
+**Founder · Product Designer · Full-Stack Developer**
+
+---
+
+### 02 — CampusLoop
+
+**EDTECH / COMMUNITY / WEB APPLICATION**
+
+A digital platform built around university life, student interaction, tutoring and access to academic resources.
+
+**Software Developer**
+
+---
+
+### 03 — BlockDAGVault
+
+**SECURITY / WEB3 / DIGITAL STORAGE**
+
+An encrypted file-storage concept exploring secure digital asset management and blockchain-oriented infrastructure.
+
+**Developer**
+
+---
+
+### 04 — Dagforge-Hub
+
+**WEB3 / TESTNET / GAMIFICATION**
+
+A Web3 ecosystem platform designed around testnet discovery, progress tracking, rewards, leaderboards, badges, wallet connectivity and AI-powered guidance.
+
+**Web3 Developer · Product Builder**
+
+---
+
+### 05 — RescueDag
+
+**BLOCKCHAIN / HACKATHON / INNOVATION**
+
+A blockchain-focused solution developed through Team LynkBlock, exploring practical applications of decentralized technology.
+
+**Developer · Team LynkBlock**
+
+---
+
+# BEYOND CODE
+
+## I DON'T ONLY BUILD SOFTWARE.
+
+## I HELP BUILD THE DATA THAT TRAINS IT.
+
+My work extends into **AI data annotation, AI evaluation and human-in-the-loop model improvement**.
+
+I've worked with task-based AI platforms and workflows associated with **Outlier, Handshake AI, OneForma and RWS TrainAI**, developing practical experience in evaluating AI outputs, annotation, classification, quality assessment and guideline-driven data work.
+
+### AI DATA & MODEL EVALUATION
+
+**AI Response Evaluation**
+Analyzing and evaluating AI-generated responses against defined quality criteria.
+
+**Data Annotation**
+Transforming raw information into structured, labeled data suitable for machine-learning workflows.
+
+**Prompt & Response Evaluation**
+Assessing prompts and model outputs for relevance, accuracy, reasoning quality and instruction adherence.
+
+**Search & Content Evaluation**
+Reviewing search results and digital content against specific evaluation guidelines.
+
+**Quality Assurance**
+Identifying inconsistencies, errors and quality issues while maintaining reliable annotation standards.
+
+**Multimodal Data**
+Working with task types involving text, images, audio and other forms of digital data.
+
+---
+
+# AI TASKING EXPERIENCE
+
+### OUTLIER
+
+**AI TRAINING · EVALUATION · QUALITY**
+
+Experience with structured AI-training workflows involving model-output evaluation, prompts, ranking and quality-focused tasks.
+
+### HANDSHAKE AI
+
+**AI EVALUATION · DATA · HUMAN FEEDBACK**
+
+Experience with project-based AI workflows focused on evaluating and improving AI-generated outputs.
+
+### ONEFORMA
+
+**ANNOTATION · SEARCH · CONTENT**
+
+Experience with task-oriented data workflows including annotation, evaluation and content-related projects.
+
+### RWS / TRAINAI
+
+**DATA · ANNOTATION · MULTIMODAL AI**
+
+Experience with professional AI-data workflows involving annotation, classification, evaluation and validation.
+
+---
+
+# THE TASKER BEHIND THE DATA
+
+## PRECISION IS THE SKILL.
+
+I approach task-based AI work with the same mindset I bring to software engineering:
+
+**Understand → Analyze → Execute → Validate → Deliver**
+
+I am comfortable working with detailed guidelines, adapting to new task environments and maintaining consistency across large volumes of work.
+
+**Detail-oriented.**
+**Fast learner.**
+**Technically minded.**
+**Quality focused.**
+**Adaptable.**
+**Reliable.**
+
+---
+
+# ENGINEERING STACK
+
+### FRONTEND
+
+React · JavaScript · HTML · CSS · Tailwind CSS
+
+### BACKEND
+
+Node.js · Python · PHP
+
+### DATA & INFRASTRUCTURE
+
+PostgreSQL · Firebase · REST APIs · Git · GitHub · Vercel
+
+### WEB3
+
+Solidity · EVM · MetaMask · BlockDAG
+
+### CREATIVE & VISUAL
+
+Three.js · Chart.js · UI/UX Design
+
+### AI
+
+Prompt Engineering · AI Evaluation · Data Annotation · Human Feedback
+
+---
+
+# EXPERIENCE
+
+## FULL-STACK DEVELOPER
+
+### STEMLAB
+
+Building and contributing to software products using modern full-stack technologies, with an emphasis on practical digital solutions and user-focused experiences.
+
+---
+
+# EDUCATION
+
+## FEDERAL UNIVERSITY DUTSE
+
+**B.Sc. Software Engineering**
+Expected Graduation — **2027**
+
+My academic foundation spans software development, algorithms, computer architecture, data science, software design and modern application development.
+
+---
+
+# CERTIFICATION
+
+### AI PROMPT ENGINEERING
+
+**TechCrush**
+
+---
+
+# LEADERSHIP
+
+Technology isn't only about code.
+
+I've also taken on leadership and community responsibilities through roles including:
+
+**Class Representative · NACOS PRO · NASES P.R.O.**
+
+These experiences strengthened my communication, coordination, teamwork and leadership abilities.
+
+---
+
+# CURRENTLY BUILDING
+
+### SOFTWARE.
+
+### AI.
+
+### PRODUCTS.
+
+### IDEAS.
+
+I am continuously exploring the intersection between **software engineering, artificial intelligence, data and emerging technology**.
+
+The goal isn't simply to write more code.
+
+**The goal is to build things that matter.**
+
+---
+
+# YUS’STYLE™
+
+### MORE THAN A NAME.
+
+### IT'S A MOVEMENT.
+
+**Yusuf Hussaini**
+
+Full-Stack Developer · AI Data Specialist · Product Builder
+
+**Let's build something exceptional.**
+
+📧 [Yusufhussaini0904@gmail.com](mailto:Yusufhussaini0904@gmail.com)
+📱 +2349136453820
+📱 +2349047864019
+𝕏 @yusstyle13

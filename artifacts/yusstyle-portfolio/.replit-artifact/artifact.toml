@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "YUS’STYLE™ — Yusuf Hussaini"
+description = "A cinematic portfolio for Yusuf Hussaini, showcasing digital engineering, artificial intelligence data work, and product building through a refined, editorial web experience."
+version = "1.0.0"
+id = "artifacts/yusstyle-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22287
+
+[services.development]
+run = "pnpm --filter @workspace/yusstyle-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/yusstyle-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/yusstyle-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22287"
+BASE_PATH = "/"
