@@ -186,6 +186,18 @@ body::before {
   filter: blur(.2px);
   animation: drift 13s ease-in-out infinite alternate;
 }
+.hero-section { background-position: center, center; background-size: auto, cover; }
+.portrait-frame { box-shadow: 0 30px 90px rgba(25, 55, 43, .2); }
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 45%, rgba(13, 29, 25, .15) 72%, rgba(13, 29, 25, .58));
+}
+.project-art img { transition: transform 1.2s cubic-bezier(.2,.8,.2,1), opacity .8s ease; }
+.project-card:hover .project-art img { transform: scale(1.06); opacity: .95; }
+.ai-workflow { background-position: center; background-size: cover; }
 .hero-orb::after {
   content: "";
   position: absolute;

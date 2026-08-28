@@ -12,6 +12,14 @@ import {
   Phone,
   X,
 } from 'lucide-react';
+import heroBackground from '@assets/generated_images/yusstyle-hero-background.jpg';
+import aiWorkflowBackground from '@assets/generated_images/ai-workflow-background.jpg';
+import portraitPhoto from '@assets/WhatsApp_Image_2026-08-21_at_09.39.53_1787955883670.jpeg';
+import twoTorConnectImage from '@assets/generated_images/project-2torconnect.jpg';
+import campusLoopImage from '@assets/generated_images/project-campusloop.jpg';
+import blockDagVaultImage from '@assets/generated_images/project-blockdagvault.jpg';
+import dagforgeHubImage from '@assets/generated_images/project-dagforge-hub.jpg';
+import rescueDagImage from '@assets/generated_images/project-rescuedag.jpg';
 
 type Project = {
   number: string;
@@ -21,6 +29,7 @@ type Project = {
   role: string;
   tone: 'green' | 'gold' | 'ink';
   mark: string;
+  image: string;
 };
 
 const projects: Project[] = [
@@ -33,6 +42,7 @@ const projects: Project[] = [
     role: 'Founder · Product Designer · Full-Stack Developer',
     tone: 'green',
     mark: '2t',
+    image: twoTorConnectImage,
   },
   {
     number: '02',
@@ -43,6 +53,7 @@ const projects: Project[] = [
     role: 'Software Developer',
     tone: 'gold',
     mark: 'cl',
+    image: campusLoopImage,
   },
   {
     number: '03',
@@ -53,6 +64,7 @@ const projects: Project[] = [
     role: 'Developer',
     tone: 'ink',
     mark: 'bd',
+    image: blockDagVaultImage,
   },
   {
     number: '04',
@@ -63,6 +75,7 @@ const projects: Project[] = [
     role: 'Web3 Developer · Product Builder',
     tone: 'green',
     mark: 'df',
+    image: dagforgeHubImage,
   },
   {
     number: '05',
@@ -73,6 +86,7 @@ const projects: Project[] = [
     role: 'Developer · Team LynkBlock',
     tone: 'gold',
     mark: 'rd',
+    image: rescueDagImage,
   },
 ];
 
@@ -215,15 +229,12 @@ function GlassNav({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (
 
 function EditorialPortrait() {
   return (
-    <div className="relative aspect-[4/5] w-full max-w-[370px] overflow-hidden rounded-[14rem_14rem_1.5rem_1.5rem] border border-[#d5ae61]/40 bg-[#234638]" data-testid="image-editorial-portrait" aria-label="Editorial self-portrait treatment">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_26%,rgba(224,192,125,.55),transparent_13%),linear-gradient(145deg,#b48a4c_0%,#263f35_28%,#142d27_72%,#111c1c_100%)]" />
+    <div className="portrait-frame relative aspect-[4/5] w-full max-w-[370px] overflow-hidden rounded-[14rem_14rem_1.5rem_1.5rem] border border-[#d5ae61]/65 bg-[#234638]" data-testid="image-editorial-portrait" aria-label="Portrait of Yusuf Hussaini">
+      <img src={portraitPhoto} alt="Yusuf Hussaini working at a laptop" className="absolute inset-0 h-full w-full origin-top scale-[1.16] object-cover object-[center_top] saturate-[.82] contrast-[1.04]" />
+      <div className="absolute inset-0 bg-[linear-gradient(155deg,rgba(21,45,37,.18),rgba(21,45,37,.08)_40%,rgba(16,28,27,.58))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_26%,rgba(224,192,125,.36),transparent_16%)] mix-blend-screen" />
       <div className="absolute -right-16 top-9 h-64 w-64 rounded-full border border-[#e8ca8e]/30" />
       <div className="absolute -right-4 top-24 h-48 w-48 rounded-full border border-[#e8ca8e]/20" />
-      <div className="absolute bottom-0 left-1/2 h-[76%] w-[72%] -translate-x-1/2 rounded-[48%_48%_0_0] bg-[linear-gradient(90deg,#152b25,#3d5548_48%,#142821)] shadow-[18px_0_35px_rgba(8,20,17,.35)]" />
-      <div className="absolute bottom-[33%] left-1/2 h-[30%] w-[39%] -translate-x-1/2 rounded-[48%_48%_44%_44%] bg-[linear-gradient(110deg,#503e31,#b78e63_48%,#5a3f31)]" />
-      <div className="absolute bottom-[50%] left-[39%] h-2 w-2 rounded-full bg-[#15251f]" />
-      <div className="absolute bottom-[50%] right-[39%] h-2 w-2 rounded-full bg-[#15251f]" />
-      <div className="absolute bottom-[42%] left-1/2 h-1 w-7 -translate-x-1/2 rounded-full bg-[#5c3d30]" />
       <div className="absolute bottom-[14%] left-6 font-mono-ui text-[9px] tracking-[0.18em] text-[#e8ca8e]">YH / DIGITAL ENGINEERING</div>
       <div className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full border border-[#e8ca8e]/60 font-display text-2xl italic text-[#e8ca8e]">Y</div>
     </div>
@@ -234,6 +245,8 @@ function ProjectVisual({ project }: { project: Project }) {
   const tone = project.tone === 'green' ? '#1d4033' : project.tone === 'gold' ? '#b99457' : '#202b2a';
   return (
     <div className="project-art relative h-full min-h-[310px] overflow-hidden" style={{ backgroundColor: tone }}>
+      <img src={project.image} alt={`${project.name} visual study`} className="absolute inset-0 h-full w-full object-cover opacity-80 mix-blend-soft-light" />
+      <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(15,36,29,.25),rgba(15,36,29,.72))]" />
       <div className="absolute inset-0 opacity-60" style={{ backgroundImage: 'linear-gradient(125deg, transparent 35%, rgba(236,211,154,.34) 35.2%, transparent 35.6%), linear-gradient(25deg, transparent 54%, rgba(236,211,154,.18) 54.2%, transparent 54.6%)' }} />
       <div className="absolute left-[15%] top-[18%] h-44 w-44 rounded-full border border-[#ecd39a]/45" />
       <div className="absolute left-[23%] top-[26%] h-28 w-28 rounded-full border border-[#ecd39a]/30" />
@@ -274,7 +287,7 @@ function AIWorkflow() {
   const steps = ['DATA', 'ANNOTATION', 'EVALUATION', 'MODEL'];
   const [active, setActive] = useState(2);
   return (
-    <div className="relative overflow-hidden rounded-[1.5rem] border border-[#d5ae61]/25 bg-[#19372b] p-5 sm:p-8" data-testid="display-ai-workflow">
+    <div className="ai-workflow relative overflow-hidden rounded-[1.5rem] border border-[#d5ae61]/25 bg-[#19372b] p-5 sm:p-8" style={{ backgroundImage: `linear-gradient(135deg, rgba(25,55,43,.91), rgba(13,29,29,.88)), url(${aiWorkflowBackground})` }} data-testid="display-ai-workflow">
       <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-[#d5ae61]/20" />
       <div className="absolute -bottom-32 left-1/3 h-80 w-80 rounded-full border border-[#d5ae61]/10" />
       <div className="relative">
@@ -344,7 +357,7 @@ function App() {
     <main id="top" className="site-shell min-h-[100dvh] bg-[#e9e4d5] text-[#19372b]">
       <GlassNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      <section className="relative flex min-h-[100dvh] items-end overflow-hidden bg-[#e9e4d5] px-5 pb-14 pt-36 sm:px-10 sm:pb-16 lg:px-16" aria-labelledby="hero-title">
+      <section className="hero-section relative flex min-h-[100dvh] items-end overflow-hidden bg-[#e9e4d5] px-5 pb-14 pt-36 sm:px-10 sm:pb-16 lg:px-16" style={{ backgroundImage: `linear-gradient(90deg, rgba(233,228,213,.98) 0%, rgba(233,228,213,.9) 38%, rgba(233,228,213,.38) 76%, rgba(233,228,213,.55) 100%), url(${heroBackground})` }} aria-labelledby="hero-title">
         <div className="hero-grid absolute inset-0 opacity-50" />
         <div className="hero-orb" />
         <div className="relative z-10 mx-auto grid w-full max-w-[1240px] gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
@@ -361,9 +374,9 @@ function App() {
             </div>
           </div>
           <div className="relative flex justify-end lg:pb-3">
-            <div className="relative w-full max-w-[370px]">
+              <div className="relative w-full max-w-[370px]">
               <EditorialPortrait />
-              <div className="absolute -bottom-5 -left-3 rounded-full border border-[#19372b]/20 bg-[#e9e4d5]/85 px-4 py-3 font-mono-ui text-[9px] tracking-[0.13em] text-[#536056] backdrop-blur-sm sm:-left-12"><span className="mr-2 text-[#b89453]">●</span>EDITORIAL SELF-PORTRAIT TREATMENT</div>
+                <div className="absolute -bottom-5 -left-3 rounded-full border border-[#19372b]/20 bg-[#e9e4d5]/85 px-4 py-3 font-mono-ui text-[9px] tracking-[0.13em] text-[#536056] backdrop-blur-sm sm:-left-12"><span className="mr-2 text-[#b89453]">●</span>YUSUF HUSSAINI / PORTRAIT</div>
             </div>
           </div>
         </div>
