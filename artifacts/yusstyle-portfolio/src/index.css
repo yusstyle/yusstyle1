@@ -226,6 +226,52 @@ body::before {
 .constellation-node { transition: transform .5s cubic-bezier(.2,.8,.2,1), background-color .35s ease, color .35s ease; }
 .constellation-node:hover, .constellation-node:focus-visible { transform: scale(1.08); }
 .timeline-line { background: linear-gradient(to bottom, transparent, hsl(var(--accent)), hsl(var(--accent)), transparent); }
+.people-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: .65rem;
+}
+.people-gallery-item {
+  position: relative;
+  min-height: 210px;
+  overflow: hidden;
+  border: 1px solid rgba(25, 55, 43, .14);
+  background: #19372b;
+  isolation: isolate;
+}
+.people-gallery-item img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: block;
+  object-fit: cover;
+  filter: saturate(.78) contrast(1.02);
+  transition: transform 1s cubic-bezier(.2,.8,.2,1), filter .7s ease;
+}
+.people-gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 46%, rgba(12, 28, 23, .68));
+}
+.people-gallery-item:hover img { transform: scale(1.06); filter: saturate(.98) contrast(1.04); }
+.people-gallery-item figcaption {
+  position: absolute;
+  z-index: 2;
+  bottom: .8rem;
+  left: .85rem;
+  color: #f0ddb1;
+  font-family: var(--app-font-mono);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+.gallery-photo-one { grid-column: span 7; min-height: 350px; }
+.gallery-photo-two { grid-column: span 5; min-height: 350px; }
+.gallery-photo-three { grid-column: span 5; min-height: 250px; }
+.gallery-photo-four { grid-column: span 7; min-height: 250px; }
+.gallery-photo-five { grid-column: span 12; min-height: 260px; }
 
 @keyframes drift {
   from { transform: translate3d(0, -2%, 0) rotate(-4deg); }
@@ -237,4 +283,10 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media (max-width: 640px) {
+  .people-gallery { gap: .45rem; }
+  .people-gallery-item { min-height: 180px; }
+  .gallery-photo-one, .gallery-photo-two, .gallery-photo-three, .gallery-photo-four { grid-column: span 6; min-height: 230px; }
+  .gallery-photo-five { grid-column: span 12; min-height: 220px; }
 }

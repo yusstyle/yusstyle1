@@ -17,9 +17,14 @@ import aiWorkflowBackground from '@assets/generated_images/ai-workflow-backgroun
 import portraitPhoto from '@assets/WhatsApp_Image_2026-08-21_at_09.39.53_1787955883670.jpeg';
 import twoTorConnectImage from '@assets/2torconnect-dashboard.png';
 import campusLoopImage from '@assets/generated_images/project-campusloop.jpg';
-import blockDagVaultImage from '@assets/generated_images/project-blockdagvault.jpg';
+import blockDagVaultImage from '@assets/blockdagvault-dashboard.png';
 import dagforgeHubImage from '@assets/generated_images/project-dagforge-hub.jpg';
 import rescueDagImage from '@assets/generated_images/project-rescuedag.jpg';
+import portraitStudyOne from '@assets/image_1788044913663.png';
+import portraitStudyTwo from '@assets/image_1788044938635.png';
+import portraitStudyThree from '@assets/image_1788044966801.png';
+import portraitStudyFour from '@assets/image_1788045003798.png';
+import portraitStudyFive from '@assets/image_1788045028826.png';
 
 type Project = {
   number: string;
@@ -69,6 +74,8 @@ const projects: Project[] = [
     tone: 'ink',
     mark: 'bd',
     image: blockDagVaultImage,
+    imageKind: 'screenshot',
+    link: 'https://blockdagvault.vercel.app/',
   },
   {
     number: '04',
@@ -115,6 +122,14 @@ const tasking = [
     category: 'DATA · ANNOTATION · MULTIMODAL AI',
     text: 'Experience with professional AI-data workflows involving annotation, classification, evaluation and validation.',
   },
+];
+
+const personalGallery = [
+  { image: portraitStudyOne, alt: 'Yusuf Hussaini working at a laptop', label: 'FOCUS / 001', layout: 'gallery-photo-one' },
+  { image: portraitStudyTwo, alt: 'Yusuf Hussaini outdoors', label: 'MOMENTUM / 002', layout: 'gallery-photo-two' },
+  { image: portraitStudyThree, alt: 'Yusuf Hussaini taking notes beside a laptop', label: 'PROCESS / 003', layout: 'gallery-photo-three' },
+  { image: portraitStudyFour, alt: 'Yusuf Hussaini working at a desk', label: 'BUILD / 004', layout: 'gallery-photo-four' },
+  { image: portraitStudyFive, alt: 'Yusuf Hussaini standing in a creative workspace', label: 'PRESENCE / 005', layout: 'gallery-photo-five' },
 ];
 
 const stack = [
@@ -442,6 +457,28 @@ function App() {
           <div className="mt-8 grid gap-14 lg:grid-cols-[.85fr_1.15fr] lg:gap-28">
             <Reveal delay={.08}><div><h2 className="font-display text-[clamp(3.5rem,7vw,7.2rem)] italic leading-[.8] tracking-[-.04em] text-[#19372b]">Precision<br />is the<br /><span className="text-[#b89453]">skill.</span></h2><p className="mt-10 max-w-sm text-sm leading-7 text-[#536056]">I approach task-based AI work with the same mindset I bring to software engineering. I am comfortable working with detailed guidelines, adapting to new task environments and maintaining consistency across large volumes of work.</p></div></Reveal>
             <Reveal delay={.15}><div className="relative pl-7 sm:pl-12"><div className="timeline-line absolute left-0 top-2 h-[calc(100%-1rem)] w-px" /><p className="font-display text-3xl italic text-[#19372b]">Understand <span className="text-[#b89453]">→</span> Analyze <span className="text-[#b89453]">→</span> Execute <span className="text-[#b89453]">→</span> Validate <span className="text-[#b89453]">→</span> Deliver</p><div className="mt-14 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3">{['Detail-oriented.', 'Fast learner.', 'Technically minded.', 'Quality focused.', 'Adaptable.', 'Reliable.'].map((trait) => <div key={trait} className="flex items-center gap-2 text-sm font-semibold text-[#536056]"><Check size={14} className="text-[#b89453]" />{trait}</div>)}</div></div></Reveal>
+          </div>
+
+          <div className="mt-24 grid gap-12 border-t border-[#19372b]/15 pt-14 lg:grid-cols-[1.18fr_.82fr] lg:items-start">
+            <Reveal>
+              <div className="people-gallery" aria-label="Portraits of Yusuf Hussaini">
+                {personalGallery.map((photo) => (
+                  <figure key={photo.label} className={`people-gallery-item ${photo.layout}`}>
+                    <img src={photo.image} alt={photo.alt} loading="lazy" />
+                    <figcaption>{photo.label}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </Reveal>
+            <Reveal delay={.12}>
+              <div className="lg:pt-8">
+                <SectionLabel>THE PERSON BEHIND THE BUILD</SectionLabel>
+                <h3 className="mt-8 max-w-md font-display text-[clamp(3rem,5vw,5.2rem)] italic leading-[.86] tracking-[-.04em] text-[#19372b]">Keep learning.<br /><span className="text-[#b89453]">Keep building.</span><br />Keep moving.</h3>
+                <p className="mt-8 max-w-md text-sm leading-7 text-[#536056]">Every idea starts somewhere. I keep showing up to understand the problem, learn the layer I do not know yet, and turn the next good question into something real.</p>
+                <p className="mt-5 max-w-md border-l border-[#b89453] pl-5 font-display text-2xl italic leading-tight text-[#19372b]">Build with patience. Move with purpose. Let the work speak.</p>
+                <div className="mt-8 flex flex-wrap gap-2">{['LEARN', 'MAKE', 'REFINE', 'REPEAT'].map((word) => <span key={word} className="rounded-full border border-[#19372b]/15 px-3 py-2 font-mono-ui text-[9px] tracking-[0.14em] text-[#536056]">{word}</span>)}</div>
+              </div>
+            </Reveal>
           </div>
 
           <div className="mt-28 grid gap-16 border-t border-[#19372b]/15 pt-14 md:grid-cols-3">
