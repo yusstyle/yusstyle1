@@ -471,12 +471,12 @@ function App() {
               </div>
             </Reveal>
             <Reveal delay={.12}>
-              <div className="lg:pt-8">
-                <SectionLabel>THE PERSON BEHIND THE BUILD</SectionLabel>
-                <h3 className="mt-8 max-w-md font-display text-[clamp(3rem,5vw,5.2rem)] italic leading-[.86] tracking-[-.04em] text-[#19372b]">Keep learning.<br /><span className="text-[#b89453]">Keep building.</span><br />Keep moving.</h3>
-                <p className="mt-8 max-w-md text-sm leading-7 text-[#536056]">Every idea starts somewhere. I keep showing up to understand the problem, learn the layer I do not know yet, and turn the next good question into something real.</p>
-                <p className="mt-5 max-w-md border-l border-[#b89453] pl-5 font-display text-2xl italic leading-tight text-[#19372b]">Build with patience. Move with purpose. Let the work speak.</p>
-                <div className="mt-8 flex flex-wrap gap-2">{['LEARN', 'MAKE', 'REFINE', 'REPEAT'].map((word) => <span key={word} className="rounded-full border border-[#19372b]/15 px-3 py-2 font-mono-ui text-[9px] tracking-[0.14em] text-[#536056]">{word}</span>)}</div>
+              <div className="motivation-panel relative overflow-hidden rounded-[1.5rem] p-7 sm:p-10 lg:pt-10" style={{ backgroundImage: `linear-gradient(145deg, rgba(16,36,29,.9), rgba(16,36,29,.7)), url(${portraitStudyTwo})` }}>
+                <SectionLabel dark>THE PERSON BEHIND THE BUILD</SectionLabel>
+                <h3 className="mt-8 max-w-md font-display text-[clamp(3rem,5vw,5.2rem)] italic leading-[.86] tracking-[-.04em] text-[#f4efdf]">Keep learning.<br /><span className="text-[#d5ae61]">Keep building.</span><br />Keep moving.</h3>
+                <p className="mt-8 max-w-md text-sm leading-7 text-[#d2dbd1]">Every idea starts somewhere. I keep showing up to understand the problem, learn the layer I do not know yet, and turn the next good question into something real.</p>
+                <p className="mt-5 max-w-md border-l border-[#d5ae61] pl-5 font-display text-2xl italic leading-tight text-[#f4efdf]">Build with patience. Move with purpose. Let the work speak.</p>
+                <div className="mt-8 flex flex-wrap gap-2">{['LEARN', 'MAKE', 'REFINE', 'REPEAT'].map((word) => <span key={word} className="rounded-full border border-[#d5ae61]/40 px-3 py-2 font-mono-ui text-[9px] tracking-[0.14em] text-[#e8ca8e]">{word}</span>)}</div>
               </div>
             </Reveal>
           </div>

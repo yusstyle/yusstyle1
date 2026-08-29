@@ -226,6 +226,20 @@ body::before {
 .constellation-node { transition: transform .5s cubic-bezier(.2,.8,.2,1), background-color .35s ease, color .35s ease; }
 .constellation-node:hover, .constellation-node:focus-visible { transform: scale(1.08); }
 .timeline-line { background: linear-gradient(to bottom, transparent, hsl(var(--accent)), hsl(var(--accent)), transparent); }
+.motivation-panel {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 24px 70px rgba(16, 36, 29, .22);
+}
+.motivation-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle at 76% 16%, rgba(213, 174, 97, .28), transparent 28%);
+}
 .people-gallery {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
