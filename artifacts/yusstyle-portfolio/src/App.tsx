@@ -12,7 +12,6 @@ import {
   Phone,
   X,
 } from 'lucide-react';
-import heroBackground from '@assets/generated_images/yusstyle-hero-background.jpg';
 import aiWorkflowBackground from '@assets/generated_images/ai-workflow-background.jpg';
 import portraitPhoto from '@assets/WhatsApp_Image_2026-08-21_at_09.39.53_1787955883670.jpeg';
 import twoTorConnectImage from '@assets/2torconnect-dashboard.png';
@@ -377,7 +376,7 @@ function App() {
     <main id="top" className="site-shell min-h-[100dvh] bg-[#e9e4d5] text-[#19372b]">
       <GlassNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      <section className="hero-section relative flex min-h-[100dvh] items-end overflow-hidden bg-[#e9e4d5] px-5 pb-14 pt-36 sm:px-10 sm:pb-16 lg:px-16" style={{ backgroundImage: `linear-gradient(90deg, rgba(233,228,213,.98) 0%, rgba(233,228,213,.9) 38%, rgba(233,228,213,.38) 76%, rgba(233,228,213,.55) 100%), url(${heroBackground})` }} aria-labelledby="hero-title">
+      <section className="hero-section relative flex min-h-[100dvh] items-end overflow-hidden bg-[#e9e4d5] px-5 pb-14 pt-36 sm:px-10 sm:pb-16 lg:px-16" style={{ backgroundImage: `linear-gradient(90deg, rgba(233,228,213,.99) 0%, rgba(233,228,213,.94) 35%, rgba(233,228,213,.58) 67%, rgba(25,55,43,.72) 100%), url(${portraitStudyTwo})` }} aria-labelledby="hero-title">
         <div className="hero-grid absolute inset-0 opacity-50" />
         <div className="hero-orb" />
         <div className="relative z-10 mx-auto grid w-full max-w-[1240px] gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
