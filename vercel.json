@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "outputDirectory": "artifacts/yusstyle-portfolio/public",
+  "builds": [
+    {
+      "src": "artifacts/yusstyle-portfolio/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "public" }
+    }
+  ],
+  "routes": [
+    { "src": "^/(.*)$", "dest": "/artifacts/yusstyle-portfolio/public/index.html" }
+  ]
+}
