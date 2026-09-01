@@ -1,14 +1,8 @@
-{
-  "version": 2,
+﻿{
+  "buildCommand": "pnpm --filter @workspace/yusstyle-portfolio run build",
+  "installCommand": "pnpm install --frozen-lockfile",
   "outputDirectory": "artifacts/yusstyle-portfolio/public",
-  "builds": [
-    {
-      "src": "artifacts/yusstyle-portfolio/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "public" }
-    }
-  ],
-  "routes": [
-    { "src": "^/(.*)$", "dest": "/artifacts/yusstyle-portfolio/public/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
